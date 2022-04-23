@@ -1,0 +1,60 @@
+{
+  "kind": "collectionType",
+  "collectionName": "djs",
+  "info": {
+    "singularName": "dj",
+    "pluralName": "djs",
+    "displayName": "DJ",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "firstname": {
+      "type": "string",
+      "required": true
+    },
+    "lastname": {
+      "type": "string",
+      "required": true
+    },
+    "email": {
+      "type": "email",
+      "required": true,
+      "unique": true
+    },
+    "host": {
+      "type": "boolean",
+      "default": false
+    },
+    "stagename": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "avatar": {
+      "type": "string",
+      "default": "https://i.pravatar.cc/300"
+    },
+    "likes": {
+      "type": "integer",
+      "min": 0
+    },
+    "bio": {
+      "type": "string",
+      "required": true,
+      "default": "Hey! I was too lazy to write a bio."
+    },
+    "rate": {
+      "type": "decimal"
+    },
+    "bookings": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::booking.booking",
+      "mappedBy": "dj_id"
+    }
+  }
+}
