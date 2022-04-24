@@ -12,12 +12,6 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "dj_id": {
-      "type": "relation",
-      "relation": "manyToOne",
-      "target": "api::dj.dj",
-      "inversedBy": "bookings"
-    },
     "email": {
       "type": "email",
       "required": false
@@ -38,6 +32,9 @@
       "type": "string"
     },
     "related_dj": {
+      "type": "string"
+    },
+    "hours": {
       "type": "string"
     }
   }

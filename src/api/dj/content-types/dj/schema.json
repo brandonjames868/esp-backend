@@ -49,12 +49,6 @@
     },
     "rate": {
       "type": "decimal"
-    },
-    "bookings": {
-      "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::booking.booking",
-      "mappedBy": "dj_id"
     }
   }
 }
